@@ -1,0 +1,23 @@
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+#relative_permalinks: true
+
+# Setup
+title:               Raging Rooster REM
+description:         'Raging Rooster Presents: The Malware Analysis Grimoire'
+url:                 https://ragingrooster.github.io
+baseurl:             ''
+plugins:              [jekyll-paginate]
+paginate:            5
+paginate_path:       "page:num"
+
+# About/contact
+author:
+  name:              Raging Rooster
+  url:               https://ragingrooster.github.io
+  email:             ragingroosterrem@gmail.com
+
+# Custom vars
+version:             1.0.0
