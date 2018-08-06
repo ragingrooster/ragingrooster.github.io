@@ -17,7 +17,9 @@ I'm a Cyber Security Analyst working at Rubica, Inc. I have a background in Digi
 ## What's with the rooster?
 
 Let me stop you there... that is not a rooster. Have you ever seen a rooster with a dragon tail, or dragon wings? 
+
 No?... That's because a rooster with serpent-like features is a cockatrice. Medieval bestiaries say cockatrices hatch from rooster eggs incubated by snakes. Some cockatrices can breathe fire, while others spit acid, but all adults can reportedly turn you to stone with mere eye contact. Neat, right?
+
 When we talk about malicious software we use terms like "bug" and "worm"... Well, roosters eat bugs, worms, and insects which I find fitting. Besides, I didn't really want a plain old rooster as a mascot, hence the mighty aberration known as the cockatrice.
 
 ## Contact Info
