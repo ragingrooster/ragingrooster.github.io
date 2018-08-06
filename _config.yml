@@ -6,7 +6,6 @@ permalink:           pretty
 
 # Setup
 title:               Raging Rooster REM
-logo:                {{ site.url }}/_assets/ragingrooster_text.png
 #tagline:            
 description:         TL;DR Malware Analysis
 url:                 https://ragingrooster.github.io
