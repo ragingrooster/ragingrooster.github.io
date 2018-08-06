@@ -23,6 +23,6 @@ When we talk about malicious software we use terms like "bug" and "worm"... Well
 
 ## Contact Info
 
-Have questions or suggestions? Feel free to contact me via [email](ragingroosterrem@gmail.com) or [LinkedIn.](https://www.linkedin.com/in/jordan-zeveney-491760125).
+Have questions or suggestions? Feel free to contact me at ragingroosterrem@gmail.com or via [LinkedIn](https://www.linkedin.com/in/jordan-zeveney-491760125).
 
 Thanks for reading!
