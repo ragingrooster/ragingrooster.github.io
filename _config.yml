@@ -5,7 +5,7 @@ permalink:           pretty
 #relative_permalinks: true
 
 # Setup
-title:               "</Raging Rooster R3M>"
+title:               \<\/Raging Rooster R3M\>
 #tagline:            
 description:         TL;DR Malware Analysis
 url:                 https://ragingrooster.github.io
