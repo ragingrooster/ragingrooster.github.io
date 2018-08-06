@@ -5,9 +5,9 @@ permalink:           pretty
 #relative_permalinks: true
 
 # Setup
-title:               Raging Rooster R3M
-tagline:             'Sp@rk Notes for Malware Analysis'
-#description:        
+title:               Raging Rooster REM
+#tagline:            
+description:         Sp@rk Notes for Malware Analysis
 url:                 https://ragingrooster.github.io
 baseurl:             ''
 plugins:              [jekyll-paginate]
