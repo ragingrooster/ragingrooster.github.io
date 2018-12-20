@@ -11,7 +11,7 @@ This blog is my attempt to organize, store, and build upon my knowledge of malwa
 
 ## Whoami?
 
-I'm a Cyber Security Analyst working at Rubica, Inc. I have a background in Digital Forensics and Information Systems Security from my time in the US Navy. I have a BS in ISS from American Military University and am working on a graduate certificate in Incident Response from SANS Technology Institute. I currently hold the following certifications:
+I'm a Cyber Security Analyst working at Rubica, Inc. I have a background in Digital Forensics and Information Systems Security from my time in the US Navy. I have a BS in ISS from American Military University and am working on a graduate certificate in Incident Response from SANS Technology Institute. I currently hold the following certifications and am a member of the GIAC Advisory Board:
 
   <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="be557b35-16c8-4411-9016-a20b30b84285"></div>
   <script type="text/javascript">
@@ -50,6 +50,17 @@ I'm a Cyber Security Analyst working at Rubica, Inc. I have a background in Digi
   </script>
 
  <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="2ab70072-5b75-4a99-b52d-886e3df335e8"></div>
+  <script type="text/javascript">
+    (function() {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = '//cdn.youracclaim.com/assets/utilities/embed.js';
+      var o = document.getElementsByTagName('script')[0];
+      o.parentNode.insertBefore(s, o);
+      })();
+  </script>
+  <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="06ac4c7c-60ad-43a6-85ea-b746104121c7"></div>
   <script type="text/javascript">
     (function() {
       var s = document.createElement('script');
