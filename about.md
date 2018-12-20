@@ -11,7 +11,19 @@ This blog is my attempt to organize, store, and build upon my knowledge of malwa
 
 ## Whoami?
 
-I'm a Cyber Security Analyst working at Rubica, Inc. I have a background in Digital Forensics and Information Systems Security from my time in the US Navy. I currently hold GCIH, GCFE, and CISSP. I have a BS in ISS from American Military University and am working on a graduate certificate in Incident Response from SANS Technology Institute.
+I'm a Cyber Security Analyst working at Rubica, Inc. I have a background in Digital Forensics and Information Systems Security from my time in the US Navy. I have a BS in ISS from American Military University and am working on a graduate certificate in Incident Response from SANS Technology Institute.
+
+  <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="be557b35-16c8-4411-9016-a20b30b84285"></div>
+  <script type="text/javascript">
+    (function() {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = '//cdn.youracclaim.com/assets/utilities/embed.js';
+      var o = document.getElementsByTagName('script')[0];
+      o.parentNode.insertBefore(s, o);
+      })();
+  </script>
 
 ## What's with the rooster?
 
