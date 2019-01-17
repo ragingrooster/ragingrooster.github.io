@@ -221,6 +221,88 @@ $ find .
 ```
 _Interesting there is a second /Contents/MacOS directory with CAC4DD3330C6 in it.. we'll come back to that later._
 
+#### I want to know if the .app file is signed.
+```
+$ cd ..
+
+$ codesign -dvvv Player.app/
+Executable=/private/tmp/kMeQxavD/Player.app/Contents/MacOS/5693093694
+Identifier=5693093694
+Format=app bundle with Mach-O thin (x86_64)
+CodeDirectory v=20200 size=1002 flags=0x0(none) hashes=26+3 location=embedded
+Hash type=sha256 size=32
+CandidateCDHash sha1=8c7c87a8734f1a25e47065f39f4e7c6f05031a4b
+CandidateCDHash sha256=07094dc7d4d61a8ece1f5f32ba41a393ca521391
+Hash choices=sha1,sha256
+CDHash=07094dc7d4d61a8ece1f5f32ba41a393ca521391
+Signature size=9012
+Authority=Developer ID Application: Hawkins Tristan (34C3U9CXLW)
+Authority=Developer ID Certification Authority
+Authority=Apple Root CA
+Timestamp=Jan 16, 2019 at 3:10:54 PM
+Info.plist entries=10
+TeamIdentifier=34C3U9CXLW
+Sealed Resources version=2 rules=13 files=5
+Internal requirements count=1 size=172
+```
+_Hey now would you look at that._
+
+#### Let's figure out which binary the .app uses
+```
+$ cd Player.app/Contents/
+
+$ plutil -p Info.plist 
+{
+  "CFBundleExecutable" => "5693093694"
+  "CFBundleIconFile" => "3694.icns"
+  "CFBundleIdentifier" => "5693093694"
+  "CFBundleInfoDictionaryVersion" => "6.0"
+  "CFBundleName" => "Player"
+  "CFBundlePackageType" => "APPL"
+  "CFBundleShortVersionString" => "1.0"
+  "CFBundleSupportedPlatforms" => [
+    0 => "MacOSX"
+  ]
+  "CFBundleVersion" => "93694"
+  "LSMinimumSystemVersion" => "10.9"
+}
+```
+_Looks like its named "5693093694". Note: If I just wanted the CFBundleExecutable info I could run: plutil -p Info.plist | grep "CFBundleExecutable" to pull just that._
+
+#### What is "5693093694", I wonder?
+```
+$ cd MacOS/
+
+$ ls
+5693093694
+
+$ file 5693093694 
+5693093694: Mach-O 64-bit executable x86_64
+
+$ md5 5693093694 
+MD5 (5693093694) = eafb2f45de3e6f6d5dee2a5e2148b8cf
+
+$ shasum 5693093694 
+b69c1075af2d307e0d12d61b7af05d4980827d5e  5693093694
+```
+_Ah, here we go. The hashes were not found on VT when I searched them today. So, I scanned with Clamscan._
+
+#### Clamscan
+```
+$ clamscan -ir 5693093694 
+
+----------- SCAN SUMMARY -----------
+Known viruses: 6770330
+Engine version: 0.100.0
+Scanned directories: 0
+Scanned files: 1
+Infected files: 0
+Data scanned: 0.12 MB
+Data read: 0.12 MB (ratio 1.00:1)
+Time: 15.947 sec (0 m 15 s)
+```
+_Nothing found. So, I uploaded it to VT. Results were 3/56 when I first sumbitted the file: <https://www.virustotal.com/#/file/2b458e0ea39db0f51b7c94e1bf28560a35f1ed07461ef9b094360d183a69da18/detection>._
+
 
 
 
