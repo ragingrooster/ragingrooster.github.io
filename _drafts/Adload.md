@@ -119,7 +119,7 @@ Xl5NyWPPpAg.cD3QOlw2RV1GoEhnKg
 $ file Xl5NyWPPpAg.cD3QOlw2RV1GoEhnKg 
 Xl5NyWPPpAg.cD3QOlw2RV1GoEhnKg: Bourne-Again shell script text executable, ASCII text
 ```
-Hey! That's a shell script, not a Macho. But, that's not too out of the extraordinary. 
+Hey! That's a shell script, not a Macho. But, that's not too extraordinary. 
 
 5. Let's see what it does.
 ```
