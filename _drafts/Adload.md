@@ -10,7 +10,7 @@ Happy New Year! Excuse my absense, while I have been away taking studying for GC
 - VirusTotal
 
 ### The Story, YAFFD
-I was googling a security tool called moloch + threat hunting and clicked on a link to what I thought was a security blog containing some juciy information. It was the third link, on the first page of results mind you! Instead of being served up some info to make my day better, I was redirected to Yet Another Fake Flash Downloader (YAFFD). Okay, I'd preffer to do some malware analysis anyway.
+I was googling a security tool called moloch + threat hunting and clicked on a link to what I thought was a security blog containing some juciy information. It was the third link, on the first page of results mind you! Instead of being served up some info to make my day better, I was redirected to Yet Another Fake Flash Dropper (YAFFD). Okay, I'd preffer to do some malware analysis anyway.
 
 <img src="{{ site.baseurl }}/images/YAFFD.png">
 
@@ -400,3 +400,16 @@ Data read: 0.73 MB (ratio 1.01:1)
 Time: 15.506 sec (0 m 15 s)
 ```
 _I also uploaded this binary to VT. It was detected as Adload by 17/56 AV engines right away. Results: <https://www.virustotal.com/#/file/a23c9488d26bf65b1b5209c042b8340304d295cdfc55f2f31cb89d3511f9634d/detection>._
+
+#### Finishing up.
+_Okay, I've identified that I was definetly redirected to yet another fake flash dropper. But, what does this version of Adload do? Well, you'll have to wait until for part 2 for the answer. But, don't worry I won't keep you waiting long._
+
+##### IOCs:
+```
+eafb2f45de3e6f6d5dee2a5e2148b8cf
+b69c1075af2d307e0d12d61b7af05d4980827d5e
+aa07958f8a08b275c799a8975171ad76
+ed26d23f8fa527e036de118b6c4d182b6159f878
+api[.]masteranalyser[.]com
+cdn[.]masteranalyser[.]com
+```
