@@ -107,7 +107,7 @@ $ plutil -p Info.plist
   "NSPrincipalClass" => "NSApplication"
 }
 ```
-######Looks like "Xl5NyWPPpAg.cD3QOlw2RV1GoEhnKg" is the binary executed by the .dmg.
+> Looks like "Xl5NyWPPpAg.cD3QOlw2RV1GoEhnKg" is the binary executed by the .dmg.
 
 ##### Let's inspect the binary.
 ```
