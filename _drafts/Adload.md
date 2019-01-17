@@ -170,7 +170,7 @@ eval "$(_m "$_t" "$_y")"
 ```
 _Eek! I don't want to spend all day on those loops. These functions are likely used to call down another binary. "t" is defintely obfuscated, likely multiple times based on the xxd command._
 
-#### Shortcut: Debug it with bash
+#### Shortcut: Debug it with bash.
 ```
 $ bash -x decoded.sh 2> debugged.txt
 ```
@@ -195,7 +195,7 @@ _This takes a minute. And executes the script! So that means... do it in a VM on
 ```
 _There is a lot of output in the debug file, we may need to reference this later, but for now the important part is a file was downloaded from api[.]masteranalyser[.]com with my machine UID, placed in the tmp directory, and then executed. We can see now that the variable "y" in the "enc" file above was actually Player.app. "t" was likely used to enumerate the OS version and UUID of my machine which was used to form the URL. Note: I defanged the URLs in the output._
 
-#### Okay, let's see what's in /tmp/kMeQxavD/Player.app
+#### Okay, let's see what's in /tmp/kMeQxavD/Player.app:
 ```
 $ cd /tmp/kMeQxavD/Player.app/
 
@@ -247,7 +247,7 @@ Internal requirements count=1 size=172
 ```
 _Hey now would you look at that._
 
-#### Let's figure out which binary the .app uses
+#### Let's figure out which binary the .app uses.
 ```
 $ cd Player.app/Contents/
 
@@ -287,7 +287,7 @@ b69c1075af2d307e0d12d61b7af05d4980827d5e  5693093694
 ```
 _Ah, here we go. The hashes were not found on VT when I searched them today. So, I scanned with Clamscan._
 
-#### Clamscan
+#### Clamscan:
 ```
 $ clamscan -ir 5693093694 
 
@@ -301,8 +301,103 @@ Data scanned: 0.12 MB
 Data read: 0.12 MB (ratio 1.00:1)
 Time: 15.947 sec (0 m 15 s)
 ```
-_Nothing found. So, I uploaded it to VT. Results were 3/56 when I first sumbitted the file: <https://www.virustotal.com/#/file/2b458e0ea39db0f51b7c94e1bf28560a35f1ed07461ef9b094360d183a69da18/detection>._
+_Nothing found. So, I uploaded it to VT. Results were 3/56 when I first sumbitted the file: <https://www.virustotal.com/#/file/2b458e0ea39db0f51b7c94e1bf28560a35f1ed07461ef9b094360d183a69da18/detection>. Looks like the binary is Adload-M, a MacOS Trojan. Windows versions of Adload typically introduce backdoors on the system._
 
+#### Back to the second Player.app and binary:
+```
+$ cd /tmp/kMeQxavD/Player.app/Contents/Resources/
 
+$ codesign -dvvv Player.app/
+Executable=/private/tmp/kMeQxavD/Player.app/Contents/Resources/Player.app/Contents/MacOS/CAC4DD3330C6
+Identifier=com.CAC4DD3330C6
+Format=app bundle with Mach-O thin (x86_64)
+CodeDirectory v=20200 size=5936 flags=0x0(none) hashes=180+3 location=embedded
+Hash type=sha256 size=32
+CandidateCDHash sha1=7fb94c5008a0a30147092a3c601d33a21406e23e
+CandidateCDHash sha256=425854b6a9e2ae95f3fca138a81baaf591dc58f7
+Hash choices=sha1,sha256
+CDHash=425854b6a9e2ae95f3fca138a81baaf591dc58f7
+Signature size=9012
+Authority=Developer ID Application: Hawkins Tristan (34C3U9CXLW)
+Authority=Developer ID Certification Authority
+Authority=Apple Root CA
+Timestamp=Jan 16, 2019 at 3:10:54 PM
+Info.plist entries=20
+TeamIdentifier=34C3U9CXLW
+Sealed Resources version=2 rules=13 files=1
+Internal requirements count=1 size=176
+```
+_That's a slightly different result than the other Player.app. The Executable of this one is CAC4DD3330C6._
 
+#### Plist says:
+```
+$ cd Player.app/Contents
+
+$ ls
+Info.plist	MacOS		Resources	_CodeSignature
+
+$ plutil -p Info.plist 
+{
+  "BuildMachineOSBuild" => "16C67"
+  "CFBundleDevelopmentRegion" => "en"
+  "CFBundleExecutable" => "CAC4DD3330C6"
+  "CFBundleIconFile" => "app5693093694.icns"
+  "CFBundleIdentifier" => "com.CAC4DD3330C6"
+  "CFBundleInfoDictionaryVersion" => "6.0"
+  "CFBundleName" => "PlayerInstaller"
+  "CFBundlePackageType" => "APPL"
+  "CFBundleShortVersionString" => "1.0"
+  "CFBundleSupportedPlatforms" => [
+    0 => "MacOSX"
+  ]
+  "CFBundleVersion" => "5693093694"
+  "DTCompiler" => "com.apple.compilers.llvm.clang.1_0"
+  "DTPlatformBuild" => "8B62"
+  "DTPlatformVersion" => "GM"
+  "DTSDKBuild" => "16B2649"
+  "DTSDKName" => "macosx10.12"
+  "LSMinimumSystemVersion" => "10.9"
+  "NSAppTransportSecurity" => {
+    "NSAllowsArbitraryLoads" => 1
+    "NSAllowsArbitraryLoadsInWebContent" => 1
+  }
+  "NSHumanReadableCopyright" => "Copyright © 2017 All rights reserved."
+  "NSPrincipalClass" => "NSApplication"
+  ```
+ 
+ ####  "CAC4DD3330C6" the second Macho.
+```
+$ cd MacOS/
+
+$ file CAC4DD3330C6 
+CAC4DD3330C6: Mach-O 64-bit executable x86_64
+
+$ md5 CAC4DD3330C6 
+MD5 (CAC4DD3330C6) = aa07958f8a08b275c799a8975171ad76
+
+$ shasum CAC4DD3330C6 
+ed26d23f8fa527e036de118b6c4d182b6159f878  CAC4DD3330C6
+```
+_VT didn't detect these hashes either. But, ClamAV caught it :)_
+
+#### Clamav:
+```
+$ cp CAC4DD3330C6 ~/Desktop/
+
+$ cd ~/Desktop/
+
+$ clamscan -ir CAC4DD3330C6 
+CAC4DD3330C6: Osx.Trojan.Generic-6776032-0 FOUND
+
+----------- SCAN SUMMARY -----------
+Known viruses: 6770330
+Engine version: 0.100.0
+Scanned directories: 0
+Scanned files: 1
+Infected files: 1
+Data scanned: 0.73 MB
+Data read: 0.73 MB (ratio 1.01:1)
+Time: 15.506 sec (0 m 15 s)
+```
+_I also uploaded this binary to VT. It was detected as Adload by 17/56 AV engines right away. Results:<Results: https://www.virustotal.com/#/file/a23c9488d26bf65b1b5209c042b8340304d295cdfc55f2f31cb89d3511f9634d/detection>_
 
