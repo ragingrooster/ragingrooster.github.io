@@ -399,5 +399,5 @@ Data scanned: 0.73 MB
 Data read: 0.73 MB (ratio 1.01:1)
 Time: 15.506 sec (0 m 15 s)
 ```
-_I also uploaded this binary to VT. It was detected as Adload by 17/56 AV engines right away. Results:<Results: https://www.virustotal.com/#/file/a23c9488d26bf65b1b5209c042b8340304d295cdfc55f2f31cb89d3511f9634d/detection>_
+_I also uploaded this binary to VT. It was detected as Adload by 17/56 AV engines right away. Results: <https://www.virustotal.com/#/file/a23c9488d26bf65b1b5209c042b8340304d295cdfc55f2f31cb89d3511f9634d/detection>._
 
