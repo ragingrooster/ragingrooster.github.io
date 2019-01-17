@@ -16,7 +16,7 @@ I was googling a security tool called moloch + threat hunting and clicked on a l
 
 ### Analysis
 
-1. After click the pretty button and downloading the .dmg, I fired up my bash shell and went to my downloads folder to see what gift I was given.
+##### After I clicked the pretty button and downloaded the .dmg, I fired up my bash shell and went to my downloads folder to see what gift I was given.
 ```
 $ cd ~/Downloads
 
@@ -37,7 +37,7 @@ AdobeFlashPlayerInstaller.dmg: code object is not signed at all
 ```
 Hey! Wouldn't Adobe sign this?
 
-2. Let's tear into this .dmg like a candy bar.
+##### Let's tear into this .dmg like a candy bar.
 ```
 $ hdiutil attach AdobeFlashPlayerInstaller.dmg 
 Checksumming Protective Master Boot Record (MBR : 0)…
@@ -85,7 +85,7 @@ $ find .
 ```
 Looks similar to most other .dmg directory structures.
 
-3. Let's take a look at the .dmg's Property List (plist) which stores some valuable app data.
+###### Let's take a look at the .dmg's Property List (plist) which stores some valuable app data.
 ```
 $ cd /Volumes/Player/Player_210.app/
 
@@ -109,7 +109,7 @@ $ plutil -p Info.plist
 ```
 Looks like "Xl5NyWPPpAg.cD3QOlw2RV1GoEhnKg" is the binary executed by the .dmg.
 
-4. Let's inspect the binary.
+##### Let's inspect the binary.
 ```
 $ cd MacOS/
 
@@ -121,7 +121,7 @@ Xl5NyWPPpAg.cD3QOlw2RV1GoEhnKg: Bourne-Again shell script text executable, ASCII
 ```
 Hey! That's a shell script, not a Macho. But, that's not too extraordinary. 
 
-5. Let's see what it does.
+##### Let's see what it does.
 ```
 $ cat Xl5NyWPPpAg.cD3QOlw2RV1GoEhnKg 
 #!/bin/bash
