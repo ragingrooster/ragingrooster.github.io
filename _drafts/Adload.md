@@ -37,7 +37,7 @@ AdobeFlashPlayerInstaller.dmg: code object is not signed at all
 ```
 ###### Hey! Wouldn't Adobe sign this?
 
-##### Let's tear into this .dmg like a candy bar.
+#### Let's tear into this .dmg like a candy bar.
 ```
 $ hdiutil attach AdobeFlashPlayerInstaller.dmg 
 Checksumming Protective Master Boot Record (MBR : 0)…
@@ -85,7 +85,7 @@ $ find .
 ```
 ###### Looks similar to most other .dmg directory structures.
 
-##### Let's take a look at the .dmg's Property List (plist) which stores some valuable app data.
+###### Let's take a look at the .dmg's Property List (plist) which stores some valuable app data.
 ```
 $ cd /Volumes/Player/Player_210.app/
 
@@ -122,7 +122,7 @@ Xl5NyWPPpAg.cD3QOlw2RV1GoEhnKg: Bourne-Again shell script text executable, ASCII
 ###### Hey! That's a shell script, not a Macho. But, that's not too extraordinary. 
 
 ##### Let's see what it does.
-```
+```bash
 $ cat Xl5NyWPPpAg.cD3QOlw2RV1GoEhnKg 
 #!/bin/bash
 cd "$(dirname "$BASH_SOURCE")"
