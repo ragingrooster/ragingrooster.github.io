@@ -16,7 +16,7 @@ I was googling a security tool called moloch + threat hunting and clicked on a l
 
 ### Analysis
 
-##### After I clicked the pretty button and downloaded the .dmg, I fired up my bash shell and went to my downloads folder to see what gift I was given.
+#### After I clicked the pretty button and downloaded the .dmg, I fired up my bash shell and went to my downloads folder to see what gift I was given.
 ```
 $ cd ~/Downloads
 
@@ -35,7 +35,7 @@ b972667995d2ca1d205c3be4d57fc80814834970  AdobeFlashPlayerInstaller.dmg
 $ codesign -dvvv AdobeFlashPlayerInstaller.dmg 
 AdobeFlashPlayerInstaller.dmg: code object is not signed at all
 ```
-###### Hey! Wouldn't Adobe sign this?
+_Hey! Wouldn't Adobe sign this?_
 
 #### Let's tear into this .dmg like a candy bar.
 ```
@@ -83,9 +83,9 @@ $ find .
 ./Player_210.app/Contents/Resources/app5692438210.icns
 ./Player_210.app/Contents/Resources/enc
 ```
-###### Looks similar to most other .dmg directory structures.
+_Looks similar to most other .dmg directory structures._
 
-###### Let's take a look at the .dmg's Property List (plist) which stores some valuable app data.
+##### Let's take a look at the .dmg's Property List (plist) which stores some valuable app data.
 ```
 $ cd /Volumes/Player/Player_210.app/
 
@@ -107,7 +107,7 @@ $ plutil -p Info.plist
   "NSPrincipalClass" => "NSApplication"
 }
 ```
-> Looks like "Xl5NyWPPpAg.cD3QOlw2RV1GoEhnKg" is the binary executed by the .dmg.
+_Looks like "Xl5NyWPPpAg.cD3QOlw2RV1GoEhnKg" is the binary executed by the .dmg._
 
 ##### Let's inspect the binary.
 ```
@@ -119,7 +119,7 @@ Xl5NyWPPpAg.cD3QOlw2RV1GoEhnKg
 $ file Xl5NyWPPpAg.cD3QOlw2RV1GoEhnKg 
 Xl5NyWPPpAg.cD3QOlw2RV1GoEhnKg: Bourne-Again shell script text executable, ASCII text
 ```
-###### Hey! That's a shell script, not a Macho. But, that's not too extraordinary. 
+_Hey! That's a shell script, not a Macho. But, that's not too extraordinary._ 
 
 ##### Let's see what it does.
 ```bash
