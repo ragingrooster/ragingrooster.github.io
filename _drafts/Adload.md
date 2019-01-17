@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Adload Sample, Part 1: Static Analysis
+title: Adload Sample, Part 1: Static Analysis... mostly
 ---
 Happy New Year! Excuse my absense, while I have been away taking studying for GCFA and enjoying the holidays. Now that's all over I'm back to show you some static analysis of a macOS trojan I found today. Hope you enjoy and please send any questions, or comments to ragingroosterrem@gmail.com. Thanks!
 
@@ -400,4 +400,3 @@ Data read: 0.73 MB (ratio 1.01:1)
 Time: 15.506 sec (0 m 15 s)
 ```
 _I also uploaded this binary to VT. It was detected as Adload by 17/56 AV engines right away. Results: <https://www.virustotal.com/#/file/a23c9488d26bf65b1b5209c042b8340304d295cdfc55f2f31cb89d3511f9634d/detection>._
-
