@@ -193,6 +193,34 @@ _This takes a minute. And executes the script! So that means... do it in a VM on
 ++ chmod +x /tmp/kMeQxavD/Player.app/Contents/MacOS/5693093694
 ++ open -a /tmp/kMeQxavD/Player.app --args s 257AF0DD-4AE7-4324-B1FF-BA47F1DE654F ''
 ```
-_There is a lot of output in the debug file, we may need to reference this later, but for now the important part is a file was downloaded from api[.]masteranalyser[.]com with my machine UID, placed in the tmp directory, and then executed. Note: I defanged the URLs in the output._
+_There is a lot of output in the debug file, we may need to reference this later, but for now the important part is a file was downloaded from api[.]masteranalyser[.]com with my machine UID, placed in the tmp directory, and then executed. We can see now that the variable "y" in the "enc" file above was actually Player.app. "t" was likely used to enumerate the OS version and UUID of my machine which was used to form the URL. Note: I defanged the URLs in the output._
+
+#### Okay, let's see what's in /tmp/kMeQxavD/Player.app
+```
+$ cd /tmp/kMeQxavD/Player.app/
+
+$ find .
+.
+./Contents
+./Contents/_CodeSignature
+./Contents/_CodeSignature/CodeResources
+./Contents/Info.plist
+./Contents/MacOS
+./Contents/MacOS/5693093694
+./Contents/Resources
+./Contents/Resources/3694.icns
+./Contents/Resources/Player.app
+./Contents/Resources/Player.app/Contents
+./Contents/Resources/Player.app/Contents/_CodeSignature
+./Contents/Resources/Player.app/Contents/_CodeSignature/CodeResources
+./Contents/Resources/Player.app/Contents/Info.plist
+./Contents/Resources/Player.app/Contents/MacOS
+./Contents/Resources/Player.app/Contents/MacOS/CAC4DD3330C6
+./Contents/Resources/Player.app/Contents/Resources
+./Contents/Resources/Player.app/Contents/Resources/app5693093694.icns
+```
+_Interesting there is a second /Contents/MacOS directory with CAC4DD3330C6 in it.. we'll come back to that later._
+
+
 
 
