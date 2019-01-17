@@ -2,7 +2,7 @@
 layout: post
 title: Adload Sample, Part 1: Static Analysis
 ---
-Happy New Year! Excuse my absense, while I have been away taking FOR508: Advanced Digital Forensics, Incident Response, and Threat Hunting, GIAC Certified Forensic Analyst (GCFA), and of course enjoying the holidays. Now that's all over I'm back to show you some static analysis of a macOS trojan I found today while conducting some research. Hope you enjoy and as always shoot any questions, or comments to ragingroosterrem@gmail.com.
+Happy New Year! Excuse my absense, while I have been away taking studying for GCFA and enjoying the holidays. Now that's all over I'm back to show you some static analysis of a macOS trojan I found today. Hope you enjoy and please send any questions, or comments to ragingroosterrem@gmail.com. Thanks!
 
 ### Tools Used:
 - macOS High Sierra virtualized with Virtualbox
