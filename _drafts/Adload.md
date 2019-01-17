@@ -14,4 +14,5 @@ Hope you enjoy and as always shoot any questions, or comments to ragingroosterre
 I was googling a security tool called moloch + threat hunting and clicked on a link to what I thought was a security blog containing some juciy information 
 (It was the third link, on the first page of results mind you). Instead of being served up some shortcuts on a platter, I was redirected to Yet Another Fake Flash Downloader (YAFFD). 
 Okay, I'd preffer to do some malware analysis today.
+
 <img src="{{ site.baseurl }}/images/YAFFD.png">
