@@ -159,9 +159,10 @@ For the next few steps the quickest and easiest way to get answers was to sumbit
 /System/Library/Frameworks/QuickLook.framework/Resources/quicklookd.app/Contents/MacOS/quicklookd
 ```
 
-#### Files Opened/Read/Written/Moved
-Files Opened
-```
+#### Files Changes
+<details>
+<summary>Files Opened</summary>
+<br>
 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support
 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdwrite
 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions
@@ -309,9 +310,11 @@ Files Opened
 /System/Library/Frameworks/Security.framework/PlugIns
 /System/Library/Frameworks/Security.framework/PlugIns/csparser.bundle/Contents/MacOS/csparser
 /System/Library/Frameworks/Security.framework/Resources/en.lproj
-```
-Files Written
-```
+</details>
+
+<details>
+<summary>Files Written</summary>
+<br>
 /Library/Keychains/crls/update-current
 /var/folders/4c/2j7t8wj96cngjk55x3sm1t2c0000gn/C/com.apple.trustd/mds/mdsDirectory.db_
 /var/folders/4c/2j7t8wj96cngjk55x3sm1t2c0000gn/C/com.apple.trustd/mds/mdsObject.db_
@@ -322,9 +325,11 @@ Files Written
 /var/folders/zz/zyxvpxvq6csfxvn_n00000y800007k/0/com.apple.nsurlsessiond/E9212A19021CA201C088F817871E6655AAA579B9/4B3DCC907D170D9B88EEE5CFB9F619791CDF0FA4/.dat.nosync0098.DStapC
 /System/Library/PrivateFrameworks/CoreServicesInternal.framework/Versions/Current
 /var/folders/4c/2j7t8wj96cngjk55x3sm1t2c0000gn/T/TemporaryItems/(A Document Being Saved By Quick Look Helper)/thumbnails.fraghandler
-```
-Files Copied
-```
+</details>
+
+<details>
+<summary>Files Copied</summary>
+<br>
 /var/folders/4c/2j7t8wj96cngjk55x3sm1t2c0000gn/C/com.apple.trustd//mds/mdsObject.db_
 /var/folders/4c/2j7t8wj96cngjk55x3sm1t2c0000gn/C/com.apple.trustd//mds/mdsDirectory.db_
 /var/folders/4c/2j7t8wj96cngjk55x3sm1t2c0000gn/C//mds/mdsObject.db_
@@ -333,10 +338,12 @@ Files Copied
 /var/folders/zz/zyxvpxvq6csfxvn_n00000y800007k/0/com.apple.nsurlsessiond/E9212A19021CA201C088F817871E6655AAA579B9/4B3DCC907D170D9B88EEE5CFB9F619791CDF0FA4/.dat.nosync0098.3Cmnr9
 /var/folders/zz/zyxvpxvq6csfxvn_n00000y800007k/0/com.apple.nsurlsessiond/E9212A19021CA201C088F817871E6655AAA579B9/4B3DCC907D170D9B88EEE5CFB9F619791CDF0FA4/.dat.nosync0098.89YA60
 /var/folders/4c/2j7t8wj96cngjk55x3sm1t2c0000gn/T/TemporaryItems/(A Document Being Saved By Quick Look Helper)/thumbnails.fraghandler
-```
-Files Dropped
-```
-/System/Library/PrivateFrameworks/CoreUI.framework/CoreUI
+</details>
+
+<details>
+<summary>Files Dropped</summary>
+<br>
+ /System/Library/PrivateFrameworks/CoreUI.framework/CoreUI
 /System/Library/Frameworks/MediaToolbox.framework/MediaToolbox
 /System/Library/PrivateFrameworks/Heimdal.framework/Heimdal
 /System/Library/Frameworks/NetworkExtension.framework/NetworkExtension
@@ -354,10 +361,11 @@ Files Dropped
 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/LaunchServices
 /System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
 /System/Library/Frameworks/ColorSync.framework/ColorSync
-```
+</details>
+
 #### Network Communications
 <details>
-<summary>HTTP Communications</summary>
+<summary>HTTP Requests</summary>
 <br>
 http://init-p01st[.]push[.]apple[.]com/bag
 http://cdn[.]masteranalyser[.]com/screens/precheck/_pl_2JybQ==
