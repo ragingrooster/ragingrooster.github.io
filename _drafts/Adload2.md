@@ -367,7 +367,7 @@ http://cdn[.]masteranalyser[.]com/scripts/jq
 http://cdn[.]masteranalyser[.]com/scripts/mjs
 http://cdn[.]masteranalyser[.]com/scripts/sjs/3
 http://cdn[.]masteranalyser[.]com/favicon.ico
-<\details>
+</details>
 
 ### Summary
 So, what did I learn about this sample?
