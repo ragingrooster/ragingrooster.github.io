@@ -2,7 +2,7 @@
 layout: post
 title: Adload Sample, Part 2. Triage.
 ---
-In previous posts I mentioned static and behavioral analysis and how they differ, but I haven't discussed triage yet. Thus, I decided to shift the focus on analysis of this sample to show you how to triage malware, because quite frankly it's a good sample to do just that.
+In previous posts I mentioned static and behavioral analysis and how they differ, but I haven't discussed triage yet. Thus, I decided to shift the analysis of this sample to show you how to triage malware, because quite frankly it's a good sample to do just that.
 
 TLDR:
 
@@ -88,14 +88,14 @@ Data scanned: 0.73 MB
 Data read: 0.73 MB (ratio 1.01:1)
 Time: 17.293 sec (0 m 17 s)
 ```
-And then searched the unpacked signatures for it.
+And then searched the directory of unpacked signatures:
 ```
 $ grep 'Osx.Trojan.Generic-6776032-0' *
 daily.ldb:Osx.Trojan.Generic-6776032-0;Engine:51-255,Target:9;0&1&2&3&4;4e5374335f5f3131305f5f66756e6374696f6e365f5f66756e63495a36352d5b4170705f64656c656761746520776562566965773a6469644661696c50726f766973696f6e616c4c6f6164576974684572726f723a666f724672616d653a5d4533245f324e535f39616c6c6f6361746f724953325f4545467676454545;405f5f5a4e5374335f5f3131375f5f6173736f635f7375625f737461746531305f5f7375625f7761697445524e535f3131756e697175655f6c6f636b494e535f356d75746578454545;4e5374335f5f3132305f5f7368617265645f7074725f656d706c616365494e346173696f313962617369635f73747265616d5f736f636b6574494e53315f32697033746370454e53315f323173747265616d5f736f636b65745f736572766963654953345f454545454e535f39616c6c6f6361746f724953375f45454545;4e5374335f5f3132305f5f7368617265645f7074725f656d706c616365494e346173696f326970313462617369635f7265736f6c766572494e53325f33746370454e53325f31367265736f6c7665725f736572766963654953345f454545454e535f39616c6c6f6361746f724953375f45454545;4e346173696f3664657461696c3132706f7369785f7468726561643466756e63494e53305f32317265736f6c7665725f736572766963655f626173653232776f726b5f696f5f736572766963655f72756e6e6572454545
 ```
 _Now I can see why the sample was detected by ClamAV._
 
-Next, I Broke up the hex where there is a ";" and searched with a hex editor. Here's the results:
+Next, I broke up the hex where there is a ";" and searched with a hex editor. Here's the results:
 ```
 4e5374335f5f3131305f5f66756e6374696f6e365f5f66756e63495a36352d5b4170705f64656c656761746520776562566965773a6469644661696c50726f766973696f6e616c4c6f6164576974684572726f723a666f724672616d653a5d4533245f324e535f39616c6c6f6361746f724953325f4545467676454545
 
@@ -130,10 +130,9 @@ Next, I Broke up the hex where there is a ";" and searched with a hex editor. He
 
 		N4asio6detail12posix_thread4funcINS0_21resolver_service_base22work_io_service_runnerEEE
 ```
-_Tada, I have confirmed that all of the strings the signature was looking for are present in the binary and converted them to ASCII. A Google search for the strings should bring you to Cymru's Totalhash Malware Analysis Database. <https://totalhash.cymru.com/analysis/?ac7ccfd1dd2701c38fda39d89ae53e1d71c8b7b8>_
+_At this point I have confirmed that all of the strings the signature was looking for are present in the binary and I've converted them to a human readable format. A quick Google search for the strings should bring you to Cymru's Totalhash Malware Analysis Database and show you these results. <https://totalhash.cymru.com/analysis/?ac7ccfd1dd2701c38fda39d89ae53e1d71c8b7b8>_
 
 ##### Strings
-Speaking of strings:
 
 "Strings are ASCII and Unicode-printable sequences of characters embedded within a file. Extracting strings can give clues about the program functionality and indicators associated with a suspect binary." [1]
 
@@ -150,7 +149,11 @@ Other interesting data points were:
 ```
 
 ```
+
+For the next few steps the quickest and easiest way to get answers was to sumbit the sample to VirusTotal and analyze the results:
+
 #### Processes Created
+
 
 
 
