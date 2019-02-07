@@ -356,7 +356,8 @@ Files Dropped
 /System/Library/Frameworks/ColorSync.framework/ColorSync
 ```
 #### Network Communications
-```
+<details>
+<br>
 http://init-p01st[.]push[.]apple[.]com/bag
 http://cdn[.]masteranalyser[.]com/screens/precheck/_pl_2JybQ==
 http://cdn[.]masteranalyser[.]com/styles/scss/3
@@ -366,7 +367,7 @@ http://cdn[.]masteranalyser[.]com/scripts/jq
 http://cdn[.]masteranalyser[.]com/scripts/mjs
 http://cdn[.]masteranalyser[.]com/scripts/sjs/3
 http://cdn[.]masteranalyser[.]com/favicon.ico
-```
+<details>
 
 ### Summary
 So, what did I learn about this sample?
