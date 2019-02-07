@@ -130,7 +130,7 @@ Next, I broke up the hex where there is a ";" and searched with a hex editor. He
 
 		N4asio6detail12posix_thread4funcINS0_21resolver_service_base22work_io_service_runnerEEE
 ```
-_At this point I have confirmed that all of the strings the signature was looking for are present in the binary and I've converted them to a human readable format. A quick Google search for the strings should bring you to Cymru's Totalhash Malware Analysis Database and show you these results. <https://totalhash.cymru.com/analysis/?ac7ccfd1dd2701c38fda39d89ae53e1d71c8b7b8>_
+_At this point I have confirmed that all of the strings the signature was looking for are present in the binary and I've converted them to a human readable format._
 
 ##### Strings
 
