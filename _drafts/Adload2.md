@@ -174,4 +174,6 @@ http://cdn[.]masteranalyser[.]com/favicon.ico
 ```
 
 #### References
-[1] Learning  Malware Analysis
+[1] Learning Malware Analysis by Monnappa K A. Publisher: Packt Publishing. Release Date: June 2018. ISBN: 9781788392501
+
+[2] Malware Analyst's Cookbook and DVD: Tools and Techniques for Fighting Malicious Code by Matthew Richard, Blake Hartstein, Steven Adair, Michael Hale Ligh. Publisher: John Wiley & Sons. Release Date: November 2010. ISBN: 9780470613030.
