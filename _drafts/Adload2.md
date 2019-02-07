@@ -102,34 +102,45 @@ Next, I broke up the hex where there is a ";" and searched with a hex editor. He
 	found at offset 528544 in iHex
 
 		NSt3__110__function6__funcIZ65-[App_delegate webView:didFailProvisionalLoadWithError:forFrame:]E3$_2NS_9allocatorIS2_EEFvvEEE
+```
+_See:_<https://developer.apple.com/documentation/webkit/webframeloaddelegate/1501459-webview>
 
-		https://developer.apple.com/documentation/webkit/webframeloaddelegate/1501459-webview
-
-
+```
 405f5f5a4e5374335f5f3131375f5f6173736f635f7375625f737461746531305f5f7375625f7761697445524e535f3131756e697175655f6c6f636b494e535f356d75746578454545
 
 	found at offset 700130 in Hex Fiend
 
 		@__ZNSt3__117__assoc_sub_state10__sub_waitERNS_11unique_lockINS_5mutexEEE
+```
+_See:_<>
 
+```
 4e5374335f5f3132305f5f7368617265645f7074725f656d706c616365494e346173696f313962617369635f73747265616d5f736f636b6574494e53315f32697033746370454e53315f323173747265616d5f736f636b65745f736572766963654953345f454545454e535f39616c6c6f6361746f724953375f45454545
 
 	found at offset 533792 in Hex Fiend
 
 		NSt3__120__shared_ptr_emplaceIN4asio19basic_stream_socketINS1_2ip3tcpENS1_21stream_socket_serviceIS4_EEEENS_9allocatorIS7_EEEE
+```
+_See:_<>
 
+```
 4e5374335f5f3132305f5f7368617265645f7074725f656d706c616365494e346173696f326970313462617369635f7265736f6c766572494e53325f33746370454e53325f31367265736f6c7665725f736572766963654953345f454545454e535f39616c6c6f6361746f724953375f45454545
 
 	found at offset 534128 in Hex Fiend
 
 		NSt3__120__shared_ptr_emplaceIN4asio2ip14basic_resolverINS2_3tcpENS2_16resolver_serviceIS4_EEEENS_9allocatorIS7_EEEE
+```
+_See:_<>
 
+```
 4e346173696f3664657461696c3132706f7369785f7468726561643466756e63494e53305f32317265736f6c7665725f736572766963655f626173653232776f726b5f696f5f736572766963655f72756e6e6572454545
 
 	found at offset 530976 in Hex Fiend
 
 		N4asio6detail12posix_thread4funcINS0_21resolver_service_base22work_io_service_runnerEEE
 ```
+_See:_<>
+
 _At this point I have confirmed that all of the strings the signature was looking for are present in the binary and I've converted them to a human readable format._
 
 ##### Strings
@@ -368,6 +379,12 @@ http://cdn[.]masteranalyser[.]com/scripts/mjs
 http://cdn[.]masteranalyser[.]com/scripts/sjs/3
 http://cdn[.]masteranalyser[.]com/favicon.ico
 ```
+
+### Summary
+So, what did I learn about this sample?
+
+1. It's detected by ClamAV as Osx.Trojan.Generic-6776032-0 and numerous AV vendors as Adload.
+2. The ClamAV Signature is looking for specific functions 
 
 #### References
 [1] Learning Malware Analysis by Monnappa K A. Publisher: Packt Publishing. Release Date: June 2018. ISBN: 9781788392501
