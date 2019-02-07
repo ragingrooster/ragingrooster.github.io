@@ -153,14 +153,210 @@ Other interesting data points were:
 For the next few steps the quickest and easiest way to get answers was to sumbit the sample to VirusTotal and analyze the results:
 
 #### Processes Created
-
-
-
+```
+/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdwrite
+/Users/user1/client/tmp/a23c9488d26bf65b1b5209c042b8340304d295cdfc55f2f31cb89d3511f9634d/sample.bin
+/usr/bin/hdiutil info -plist
+/System/Library/Frameworks/QuickLook.framework/Resources/quicklookd.app/Contents/MacOS/quicklookd
+```
 
 #### Files Opened/Read/Written/Moved
-
+Files Opened
+```
+/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support
+/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdwrite
+/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions
+/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/Resources/Info.plist
+/System/Library/PrivateFrameworks/Heimdal.framework/Heimdal
+/System/Library/PrivateFrameworks/Heimdal.framework/Versions/Current
+/Users/user1/.CFUserTextEncoding
+/System/Library/Frameworks/GSS.framework/GSS
+/System/Library/Frameworks/GSS.framework/Versions/Current
+/var/folders/4c/2j7t8wj96cngjk55x3sm1t2c0000gn/C/com.apple.QuickLook.thumbnailcache/dirty
+/etc/master.passwd
+/tmp
+/private/tmp/CommCenter.KeepAlive.Enabled
+/private/tmp
+/Library/Keychains/crls/update-current
+/Library/Keychains/crls/valid.sqlite3-journal
+/Library/Keychains/crls
+/Users/user1/client/tmp/a23c9488d26bf65b1b5209c042b8340304d295cdfc55f2f31cb89d3511f9634d
+/Users/user1/client/tmp/a23c9488d26bf65b1b5209c042b8340304d295cdfc55f2f31cb89d3511f9634d/sample.bin
+/var/db/timezone/icutz/icutz44l.dat
+/var/db/timezone/zoneinfo/posixrules
+/var/folders/4c/2j7t8wj96cngjk55x3sm1t2c0000gn/C/com.apple.trustd/mds/mds.lock
+/var/folders/4c/2j7t8wj96cngjk55x3sm1t2c0000gn/C/com.apple.trustd/mds/mdsObject.db_
+/private/var/db/mds/system/mdsObject.db
+/var/folders/4c/2j7t8wj96cngjk55x3sm1t2c0000gn/C/com.apple.trustd/mds/mdsDirectory.db_
+/private/var/db/mds/system/mdsDirectory.db
+/var/folders/4c/2j7t8wj96cngjk55x3sm1t2c0000gn/C/com.apple.trustd/mds/mdsObject.db
+/System/Library/Security
+/var/folders/4c/2j7t8wj96cngjk55x3sm1t2c0000gn/C/com.apple.trustd/mds/mdsDirectory.db
+/Users/user1/Library/Security
+/Users/user1/Library/Keychains/login.keychain-db
+/System/Library/Keychains/SystemRootCertificates.keychain
+/Library/Keychains/System.keychain
+/System/Library/Input Methods/PressAndHold.app/Contents/PlugIns/PAH_Extension.appex
+/System/Library/CoreServices/FolderActionsDispatcher.app
+/System/Library/CoreServices/FolderActionsDispatcher.app/Contents
+/System/Library/CoreServices/FolderActionsDispatcher.app/Contents/Info.plist
+/System/Library/CoreServices/FolderActionsDispatcher.app/Contents/MacOS/FolderActionsDispatcher
+/System/Library/CoreServices/FolderActionsDispatcher.app/Contents/_CodeSignature/CodeRequirements-1
+/System/Library/CoreServices/System Events.app
+/System/Library/CoreServices/System Events.app/Contents
+/System/Library/CoreServices/System Events.app/Contents/Info.plist
+/System/Library/CoreServices/System Events.app/Contents/MacOS/System Events
+/System/Library/CoreServices/System Events.app/Contents/_CodeSignature/CodeRequirements-1
+/private/var/db/uuidtext/B3
+/private/var/db/uuidtext/BE
+/private/var/db/uuidtext/88
+/private/var/db/uuidtext/D0
+/private/var/db/uuidtext/1B
+/private/var/db/uuidtext/D2
+/private/var/db/uuidtext/38
+/private/var/db/uuidtext/F3
+/private/var/db/uuidtext/1E
+/private/var/db/uuidtext/D8
+/System/Library/PrivateFrameworks/CoreServicesInternal.framework/CoreServicesInternal
+/System/Library/PrivateFrameworks/CoreServicesInternal.framework/Versions/Current
+/System/Library/Frameworks/CoreServices.framework/Frameworks
+/System/Library/Frameworks/CoreServices.framework/Versions/Current
+/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/LaunchServices
+/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/Current
+/System/Library/Frameworks/ApplicationServices.framework/Frameworks
+/System/Library/Fonts/SFNSText.ttf
+/System/Library/Frameworks/ApplicationServices.framework/Frameworks/ATS.framework
+/System/Library/Frameworks/ApplicationServices.framework/Frameworks/ATS.framework/Resources
+/System/Library/Frameworks/ApplicationServices.framework/Frameworks/ATS.framework/Resources/Info.plist
+/System/Library/Frameworks/ApplicationServices.framework/Frameworks/ATS.framework/Resources/English.lproj
+/System/Library/Frameworks/ApplicationServices.framework/Frameworks/ATS.framework/Resources/Base.lproj
+/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Resources
+/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/Current
+/Library/Application Support/CrashReporter/SubmitDiagInfo.domains
+/usr/share/icu/icudt59l.dat
+/System/Library/Frameworks/ColorSync.framework/ColorSync
+/System/Library/Frameworks/ColorSync.framework/Versions/Current
+/System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/VibrantLightAppearance.car
+/System/Library/Frameworks/CoreText.framework/CoreText
+/System/Library/Frameworks/CoreText.framework/Versions/Current
+/Users/user1/client/tmp/a23c9488d26bf65b1b5209c042b8340304d295cdfc55f2f31cb89d3511f9634d/en.lproj
+/Users/user1/client/tmp/a23c9488d26bf65b1b5209c042b8340304d295cdfc55f2f31cb89d3511f9634d/Base.lproj
+/System/Library/CoreServices/SystemAppearance.bundle
+/System/Library/CoreServices/SystemAppearance.bundle/Contents
+/System/Library/CoreServices/SystemAppearance.bundle/Contents/Info.plist
+/System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources
+/System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/en.lproj
+/System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/Base.lproj
+/System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/English.lproj
+/System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/SystemAppearance.car
+/Users/user1/Library/Preferences/com.apple.LaunchServices/com.apple.LaunchServices.plist
+/Users/user1/Library/Preferences/com.apple.LaunchServices/com.apple.launchservices.secure.plist
+/System/Library/Frameworks/OpenCL.framework/Libraries
+/System/Library/Frameworks/OpenCL.framework/Versions/Current
+/Users/user1/client/tmp/a23c9488d26bf65b1b5209c042b8340304d295cdfc55f2f31cb89d3511f9634d/sample.bin/..namedfork/rsrc
+/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+/System/Library/Frameworks/CoreGraphics.framework/Versions/Current
+/System/Library/Frameworks/Accelerate.framework/Frameworks
+/System/Library/Frameworks/Accelerate.framework/Versions/Current
+/System/Library/Frameworks/AppKit.framework/Versions/Current
+/System/Library/Frameworks/AppKit.framework
+/System/Library/Frameworks/AppKit.framework/Resources
+/System/Library/Frameworks/AppKit.framework/Resources/Info.plist
+/System/Library/Frameworks/AppKit.framework/AppKit
+/System/Library/Frameworks/AppKit.framework/Resources/English.lproj
+/System/Library/Frameworks/AppKit.framework/Resources/Base.lproj
+/System/Library/Frameworks/AppKit.framework/English.lproj
+/System/Library/Frameworks/AppKit.framework/Base.lproj
+/System/Library/Frameworks/Carbon.framework/Versions/A/Frameworks/HIToolbox.framework/Resources/Extras2.rsrc
+/System/Library/CoreServices/SystemAppearance.bundle/Contents/Resources/Assets.car
+/System/Library/PrivateFrameworks/CoreUI.framework
+/System/Library/PrivateFrameworks/CoreUI.framework/Resources
+/System/Library/PrivateFrameworks/CoreUI.framework/Resources/Info.plist
+/System/Library/PrivateFrameworks/CoreUI.framework/CoreUI
+/System/Library/PrivateFrameworks/CoreUI.framework/Versions/Current
+/System/Library/PrivateFrameworks/CoreUI.framework/Resources/English.lproj
+/System/Library/PrivateFrameworks/CoreUI.framework/Resources/Base.lproj
+/System/Library/PrivateFrameworks/CoreUI.framework/Resources/DuplicateImageNames.plist
+/System/Library/Frameworks/AVFoundation.framework/AVFoundation
+/System/Library/Frameworks/AVFoundation.framework/Versions/Current
+/System/Library/Frameworks/CoreMedia.framework/CoreMedia
+/System/Library/Frameworks/CoreMedia.framework/Versions/Current
+/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/HIServices
+/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/Versions/Current
+/System/Library/Frameworks/CFNetwork.framework/Resources/CFNETWORK_DIAGNOSTICS
+/var/folders/4c/2j7t8wj96cngjk55x3sm1t2c0000gn/C/mds/mds.lock
+/var/folders/4c/2j7t8wj96cngjk55x3sm1t2c0000gn/C/mds/mdsObject.db_
+/var/folders/4c/2j7t8wj96cngjk55x3sm1t2c0000gn/C/mds/mdsDirectory.db_
+/var
+/var/folders/4c/2j7t8wj96cngjk55x3sm1t2c0000gn/C/mds/mdsObject.db
+/var/folders/4c/2j7t8wj96cngjk55x3sm1t2c0000gn/C/mds/mdsDirectory.db
+/System/Library/Security/Certificates.bundle
+/System/Library/Security/Certificates.bundle/Contents
+/System/Library/Security/Certificates.bundle/Contents/Info.plist
+/System/Library/Security/Certificates.bundle/Contents/Resources
+/System/Library/Security/Certificates.bundle/Contents/Resources/en.lproj
+/System/Library/Security/Certificates.bundle/Contents/Resources/Base.lproj
+/var/db/DetachedSignatures
+/Library/Preferences/com.apple.security.plist
+/System/Library/Keychains/SystemTrustSettings.plist
+/System/Library/Frameworks/Security.framework
+/System/Library/Frameworks/Security.framework/Resources
+/System/Library/Frameworks/Security.framework/Resources/Info.plist
+/System/Library/Frameworks/Security.framework/Security
+/System/Library/Frameworks/Security.framework/Versions/Current
+/System/Library/Frameworks/Security.framework/PlugIns/csparser.bundle
+/System/Library/Frameworks/Security.framework/PlugIns/csparser.bundle/Contents
+/System/Library/Frameworks/Security.framework/PlugIns/csparser.bundle/Contents/Info.plist
+/System/Library/Frameworks/Security.framework/PlugIns
+/System/Library/Frameworks/Security.framework/PlugIns/csparser.bundle/Contents/MacOS/csparser
+/System/Library/Frameworks/Security.framework/Resources/en.lproj
+```
+Files Written
+```
+/Library/Keychains/crls/update-current
+/var/folders/4c/2j7t8wj96cngjk55x3sm1t2c0000gn/C/com.apple.trustd/mds/mdsDirectory.db_
+/var/folders/4c/2j7t8wj96cngjk55x3sm1t2c0000gn/C/com.apple.trustd/mds/mdsObject.db_
+/var/folders/4c/2j7t8wj96cngjk55x3sm1t2c0000gn/C/mds/mdsDirectory.db_
+/var/folders/4c/2j7t8wj96cngjk55x3sm1t2c0000gn/C/mds/mdsObject.db_
+/var/folders/zz/zyxvpxvq6csfxvn_n00000y800007k/0/com.apple.nsurlsessiond/E9212A19021CA201C088F817871E6655AAA579B9/4B3DCC907D170D9B88EEE5CFB9F619791CDF0FA4/.dat.nosync0098.89YA60
+/var/folders/zz/zyxvpxvq6csfxvn_n00000y800007k/0/com.apple.nsurlsessiond/E9212A19021CA201C088F817871E6655AAA579B9/4B3DCC907D170D9B88EEE5CFB9F619791CDF0FA4/.dat.nosync0098.3Cmnr9
+/var/folders/zz/zyxvpxvq6csfxvn_n00000y800007k/0/com.apple.nsurlsessiond/E9212A19021CA201C088F817871E6655AAA579B9/4B3DCC907D170D9B88EEE5CFB9F619791CDF0FA4/.dat.nosync0098.DStapC
+/System/Library/PrivateFrameworks/CoreServicesInternal.framework/Versions/Current
+/var/folders/4c/2j7t8wj96cngjk55x3sm1t2c0000gn/T/TemporaryItems/(A Document Being Saved By Quick Look Helper)/thumbnails.fraghandler
+```
+Files Copied
+```
+/var/folders/4c/2j7t8wj96cngjk55x3sm1t2c0000gn/C/com.apple.trustd//mds/mdsObject.db_
+/var/folders/4c/2j7t8wj96cngjk55x3sm1t2c0000gn/C/com.apple.trustd//mds/mdsDirectory.db_
+/var/folders/4c/2j7t8wj96cngjk55x3sm1t2c0000gn/C//mds/mdsObject.db_
+/var/folders/4c/2j7t8wj96cngjk55x3sm1t2c0000gn/C//mds/mdsDirectory.db_
+/var/folders/zz/zyxvpxvq6csfxvn_n00000y800007k/0/com.apple.nsurlsessiond/E9212A19021CA201C088F817871E6655AAA579B9/4B3DCC907D170D9B88EEE5CFB9F619791CDF0FA4/.dat.nosync0098.DStapC
+/var/folders/zz/zyxvpxvq6csfxvn_n00000y800007k/0/com.apple.nsurlsessiond/E9212A19021CA201C088F817871E6655AAA579B9/4B3DCC907D170D9B88EEE5CFB9F619791CDF0FA4/.dat.nosync0098.3Cmnr9
+/var/folders/zz/zyxvpxvq6csfxvn_n00000y800007k/0/com.apple.nsurlsessiond/E9212A19021CA201C088F817871E6655AAA579B9/4B3DCC907D170D9B88EEE5CFB9F619791CDF0FA4/.dat.nosync0098.89YA60
+/var/folders/4c/2j7t8wj96cngjk55x3sm1t2c0000gn/T/TemporaryItems/(A Document Being Saved By Quick Look Helper)/thumbnails.fraghandler
+```
+Files Dropped
+```
+/System/Library/PrivateFrameworks/CoreUI.framework/CoreUI
+/System/Library/Frameworks/MediaToolbox.framework/MediaToolbox
+/System/Library/PrivateFrameworks/Heimdal.framework/Heimdal
+/System/Library/Frameworks/NetworkExtension.framework/NetworkExtension
+/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HIServices.framework/HIServices
+/System/Library/PrivateFrameworks/WirelessDiagnostics.framework/WirelessDiagnostics
+/System/Library/PrivateFrameworks/CoreServicesInternal.framework/CoreServicesInternal
+/System/Library/Frameworks/GSS.framework/GSS
+/System/Library/Frameworks/AVFoundation.framework/AVFoundation
+/System/Library/Frameworks/AppKit.framework/AppKit
+/System/Library/Frameworks/CoreMedia.framework/CoreMedia
+/System/Library/Frameworks/Security.framework/Security
+/System/Library/Frameworks/VideoToolbox.framework/VideoToolbox
+/System/Library/Frameworks/QuickLook.framework/Versions/A/Resources/quicklookd.app/Contents/MacOS/quicklookd
+/System/Library/Frameworks/CoreText.framework/CoreText
+/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/LaunchServices
+/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+/System/Library/Frameworks/ColorSync.framework/ColorSync
+```
 #### Network Communications
-
 ```
 http://init-p01st[.]push[.]apple[.]com/bag
 http://cdn[.]masteranalyser[.]com/screens/precheck/_pl_2JybQ==
@@ -177,3 +373,4 @@ http://cdn[.]masteranalyser[.]com/favicon.ico
 [1] Learning Malware Analysis by Monnappa K A. Publisher: Packt Publishing. Release Date: June 2018. ISBN: 9781788392501
 
 [2] Malware Analyst's Cookbook and DVD: Tools and Techniques for Fighting Malicious Code by Matthew Richard, Blake Hartstein, Steven Adair, Michael Hale Ligh. Publisher: John Wiley & Sons. Release Date: November 2010. ISBN: 9780470613030.
+[3] https://www.virustotal.com/#/file/a23c9488d26bf65b1b5209c042b8340304d295cdfc55f2f31cb89d3511f9634d/details
