@@ -357,6 +357,7 @@ Files Dropped
 ```
 #### Network Communications
 <details>
+<summary>HTTP Communications</summary>
 <br>
 http://init-p01st[.]push[.]apple[.]com/bag
 http://cdn[.]masteranalyser[.]com/screens/precheck/_pl_2JybQ==
