@@ -399,7 +399,13 @@ So, what did I learn about this sample through Triage Analysis?
 
 1. It's detected by ClamAV as Osx.Trojan.Generic-6776032-0 and numerous AV vendors as Adload.
 2. The ClamAV Signature is looking for 5 specific functions seen across different variants of Adload (see above).
-3. The binary 
+3. Adload is a Trojan Downloader (see VT results).
+4. This sample tries to access System Trust Settings (see Filesystem section above).
+5. The sample makes HTTP requests to cdn[.]masteranalyser[.]com.
+
+A more indepth analysis could uncover more details, but by conducting a quick triage of the sample I can already tell this isn't something I would want on my system.. would you?
+
+Thanks for reading. As always, please let me know if I missed anything by shooting an email to ragingroosterrem@gmail.com. Thanks!
 
 #### References
 1. Learning Malware Analysis by Monnappa K A. Publisher: Packt Publishing. Release Date: June 2018. ISBN: 9781788392501
