@@ -10,8 +10,17 @@ TLDR:
 Triaging malware is the quick and dirty approach to analysis, much like applying a tourniquet to stop someone from bleeding. Sometimes analysts just need results quickly, so they collect enough relevant information from the sample to identify and remove it from the affected system(s). Reverse Engineering a binary is the best way to figure out exactly what the malware does, but sometimes time is of the essence.
 
 ##### Essential Information:
-Hashes, File Properties, Code Signature, AV Detection, Strings, Processes Created, Files Opened/Read/Written/Moved, Network Communications
-
+```
+Filename
+Hashes
+File Properties
+Code Signature
+AV Detection
+Strings
+Processes
+Filesystem Changes
+Network Communications
+```
 #### Triaging the Adload sample.
 
 I showed a few of these steps in my previous post, so I'll just fill in the info I already presented and pick up from there.
@@ -159,7 +168,7 @@ For the next few steps the quickest and easiest way to get answers was to sumbit
 /System/Library/Frameworks/QuickLook.framework/Resources/quicklookd.app/Contents/MacOS/quicklookd
 ```
 
-#### Files Changes
+#### Filesystem Changes
 <details>
 <summary>Files Opened</summary>
 <br>
