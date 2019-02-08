@@ -35,6 +35,7 @@ CAC4DD3330C6
 MD5	aa07958f8a08b275c799a8975171ad76
 SHA-1 ed26d23f8fa527e036de118b6c4d182b6159f878
 SHA-256 a23c9488d26bf65b1b5209c042b8340304d295cdfc55f2f31cb89d3511f9634d
+SSDeep 12288:hHdJmX8Z0J0cBzKKjXgQBGmEvvwN56K/dXUA0ZVG21bLNKGm:pmu0JbzjXsXwv6adXUAQXdbm
 ```
 
 ##### File Properties:
@@ -73,16 +74,16 @@ Internal requirements count=1 size=176
 ```
 
 ##### AV Detection
-Here is where I want to show you a cool trick that I learned from Chapter 3: Malware Classification of the Malware Analyst's Cookbook and DVD.
+Here is where I want to show you a cool trick that I learned from Chapter 3 of the Malware Analyst's Cookbook and DVD [2].
 
-First, I updated my ClamAV signatures (important step). Then, I unpacked them using sigtool.
+###### First, I updated my ClamAV signatures (important step). Then, I unpacked them using sigtool.
 ```
 $ sigtool -u main.cvd
 
 $ sigtool -u daily.cvd
 ```
 
-Next, I scanned the suspicious file again with clamscan to get the signature name...
+###### Next, I scanned the suspicious file again with clamscan to get the signature name...
 ```Get-Content
 $ clamscan ~/Desktop/CAC4DD3330C6
 CAC4DD3330C6: Osx.Trojan.Generic-6776032-0 FOUND
@@ -97,22 +98,20 @@ Data scanned: 0.73 MB
 Data read: 0.73 MB (ratio 1.01:1)
 Time: 17.293 sec (0 m 17 s)
 ```
-And then searched the directory of unpacked signatures:
+###### And then searched the directory of unpacked signatures:
 ```
 $ grep 'Osx.Trojan.Generic-6776032-0' *
 daily.ldb:Osx.Trojan.Generic-6776032-0;Engine:51-255,Target:9;0&1&2&3&4;4e5374335f5f3131305f5f66756e6374696f6e365f5f66756e63495a36352d5b4170705f64656c656761746520776562566965773a6469644661696c50726f766973696f6e616c4c6f6164576974684572726f723a666f724672616d653a5d4533245f324e535f39616c6c6f6361746f724953325f4545467676454545;405f5f5a4e5374335f5f3131375f5f6173736f635f7375625f737461746531305f5f7375625f7761697445524e535f3131756e697175655f6c6f636b494e535f356d75746578454545;4e5374335f5f3132305f5f7368617265645f7074725f656d706c616365494e346173696f313962617369635f73747265616d5f736f636b6574494e53315f32697033746370454e53315f323173747265616d5f736f636b65745f736572766963654953345f454545454e535f39616c6c6f6361746f724953375f45454545;4e5374335f5f3132305f5f7368617265645f7074725f656d706c616365494e346173696f326970313462617369635f7265736f6c766572494e53325f33746370454e53325f31367265736f6c7665725f736572766963654953345f454545454e535f39616c6c6f6361746f724953375f45454545;4e346173696f3664657461696c3132706f7369785f7468726561643466756e63494e53305f32317265736f6c7665725f736572766963655f626173653232776f726b5f696f5f736572766963655f72756e6e6572454545
 ```
 _Now I can see why the sample was detected by ClamAV._
 
-Next, I broke up the hex where there is a ";" and searched with a hex editor. Here's the results:
+###### Next, I broke up the hex where there is a semicolon and used the hex as search tehex editor. Here's the results:
 ```
 4e5374335f5f3131305f5f66756e6374696f6e365f5f66756e63495a36352d5b4170705f64656c656761746520776562566965773a6469644661696c50726f766973696f6e616c4c6f6164576974684572726f723a666f724672616d653a5d4533245f324e535f39616c6c6f6361746f724953325f4545467676454545
 
 	found at offset 528544 in iHex
 
 		NSt3__110__function6__funcIZ65-[App_delegate webView:didFailProvisionalLoadWithError:forFrame:]E3$_2NS_9allocatorIS2_EEFvvEEE
-
-See:_<https://developer.apple.com/documentation/webkit/webframeloaddelegate/1501459-webview>
 
 405f5f5a4e5374335f5f3131375f5f6173736f635f7375625f737461746531305f5f7375625f7761697445524e535f3131756e697175655f6c6f636b494e535f356d75746578454545
 
