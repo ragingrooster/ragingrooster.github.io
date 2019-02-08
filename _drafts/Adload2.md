@@ -74,7 +74,7 @@ Internal requirements count=1 size=176
 ```
 
 ##### AV Detection
-Here is where I want to show you a cool trick that I learned from Chapter 3 of the Malware Analyst's Cookbook and DVD [2].
+Here is where I want to show you a cool trick that I learned from Chapter 3 of the Malware Analyst's Cookbook [2].
 
 ###### First, I updated my ClamAV signatures (important step). Then, I unpacked them using sigtool.
 ```
