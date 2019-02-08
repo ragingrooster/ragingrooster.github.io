@@ -50,7 +50,7 @@ Mach header
 ```
 _Using otool I confirmed that the Mach-O file is indeed a 64-bit executable based on the magic number, 0xfeedfacf._
 
-###### Code Signature
+##### Code Signature
 ```
 $ codesign -dvvv CAC4DD3330C6
 Executable=/REDACTED-FILE-PATH/CAC4DD3330C6
