@@ -105,14 +105,15 @@ daily.ldb:Osx.Trojan.Generic-6776032-0;Engine:51-255,Target:9;0&1&2&3&4;4e537433
 ```
 _Now I can see why the sample was detected by ClamAV._
 
-###### Next, I broke up the hex where there is a semicolon and used the hex as search tehex editor. Here's the results:
+###### Next, I broke up the hex where there is a semicolon and converted the Hex to ASCII. Here's the results:
 ```
-4e5374335f5f3131305f5f66756e6374696f6e365f5f66756e63495a36352d5b4170705f64656c656761746520776562566965773a6469644661696c50726f766973696f6e616c4c6f6164576974684572726f723a666f724672616d653a5d4533245f324e535f39616c6c6f6361746f724953325f4545467676454545
+$ echo '4e5374335f5f3131305f5f66756e6374696f6e365f5f66756e63495a36352d5b4170705f64656c656761746520776562566965773a6469644661696c50726f766973696f6e616c4c6f6164576974684572726f723a666f724672616d653a5d4533245f324e535f39616c6c6f6361746f724953325f4545467676454545' |xxd -r -p
+NSt3__110__function6__funcIZ65-[App_delegate webView:didFailProvisionalLoadWithError:forFrame:]E3$_2NS_9allocatorIS2_EEFvvEEE
+```
 
-	found at offset 528544 in iHex
 
-		NSt3__110__function6__funcIZ65-[App_delegate webView:didFailProvisionalLoadWithError:forFrame:]E3$_2NS_9allocatorIS2_EEFvvEEE
 
+```
 405f5f5a4e5374335f5f3131375f5f6173736f635f7375625f737461746531305f5f7375625f7761697445524e535f3131756e697175655f6c6f636b494e535f356d75746578454545
 
 	found at offset 700130 in Hex Fiend
