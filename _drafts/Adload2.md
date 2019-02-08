@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Adload Sample, Part 2. Triage.
+title: Adload Sample, Part 2. Triage Analysis.
 ---
 In previous posts I mentioned static and behavioral analysis and how they differ, but I haven't discussed triage yet. Thus, I decided to shift the analysis of this sample to show you how to triage malware, because quite frankly it's a good sample to do just that.
 
