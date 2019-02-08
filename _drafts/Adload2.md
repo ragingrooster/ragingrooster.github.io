@@ -130,16 +130,7 @@ N4asio6detail12posix_thread4funcINS0_21resolver_service_base22work_io_service_ru
 4. NSt3__120__shared_ptr_emplaceIN4asio2ip14basic_resolverINS2_3tcpENS2_16resolver_serviceIS4_EEEENS_9allocatorIS7_EEEE
 5. N4asio6detail12posix_thread4funcINS0_21resolver_service_base22work_io_service_runnerEEE
 ```
-_What do they mean?:_
-1. Called if an error occurs when starting to load data for a page.
-2. 
-
-
-
-
-
-
-_At this point I have confirmed that all of the strings the signature was looking for are present in the binary and I've converted them to a human readable format._
+_Googling some of the functions brings you to Total Hash and a related Adload sample from May, 2018.<https://totalhash.cymru.com/analysis/?ac7ccfd1dd2701c38fda39d89ae53e1d71c8b7b8>
 
 ##### Strings
 
@@ -147,19 +138,34 @@ _At this point I have confirmed that all of the strings the signature was lookin
 
 This little tool is really handy when examining binaries and can reveal IOCs such as functions, commands, filenames, network data, etc.
 
-I redirected the output of the program to a text file for analysis. The output for this sample was 1109 lines, so I uploaded it here <>.
+I redirected the output of the program to a text file for analysis and was able to locate the functions from the ClamAV signature in the output of strings:
+```
+$ strings CAC4DD3330C6 > strings
 
-I was able to locate the functions from the ClamAV signature in the output of strings:
+$ grep 'NSt3__110__function6__funcIZ65-' strings 
+NSt3__110__function6__funcIZ65-[App_delegate webView:didFailProvisionalLoadWithError:forFrame:]E3$_2NS_9allocatorIS2_EEFvvEEE
+
+$ grep 'ZNSt3__117__assoc_sub_state10' strings 
+@__ZNSt3__117__assoc_sub_state10__sub_waitERNS_11unique_lockINS_5mutexEEE
+
+$ grep 'NSt3__120__shared_ptr_emplaceIN4asio' strings 
+NSt3__120__shared_ptr_emplaceIN4asio19basic_stream_socketINS1_2ip3tcpENS1_21stream_socket_serviceIS4_EEEENS_9allocatorIS7_EEEE
+NSt3__120__shared_ptr_emplaceIN4asio2ip14basic_resolverINS2_3tcpENS2_16resolver_serviceIS4_EEEENS_9allocatorIS7_EEEE
+
+$ grep 'N4asio6detail12posix_thread4funcINS0_21resolver_service_base22work_io_service_runnerEEE' strings 
+N4asio6detail12posix_thread4funcINS0_21resolver_service_base22work_io_service_runnerEEE
+
+```
+_At this point I have confirmed that all of the strings the signature was looking for are present in the binary and I've converted them to a human readable format._
+
+Some other interesting data I found in strings were directory locations (we'll see these again later):
+```
+$ grep -E '/[a-z0-9]{0,10}/' strings 
+/usr/bin/hdiutil
+/usr/bin/open
 ```
 
-```
-
-Other interesting data points were:
-```
-
-```
-
-For the next few steps the quickest and easiest way to get answers was to sumbit the sample to VirusTotal and analyze the results:
+For the next few steps the quickest and easiest way to get answers was to sumbit the sample to VirusTotal and analyze the results (Automated Behavioral Analysis):
 
 #### Processes Created
 ```
@@ -389,10 +395,11 @@ http://cdn[.]masteranalyser[.]com/favicon.ico
 </details>
 
 ### Summary
-So, what did I learn about this sample?
+So, what did I learn about this sample through Triage Analysis?
 
 1. It's detected by ClamAV as Osx.Trojan.Generic-6776032-0 and numerous AV vendors as Adload.
-2. The ClamAV Signature is looking for specific functions 
+2. The ClamAV Signature is looking for 5 specific functions seen across different variants of Adload (see above).
+3. The binary 
 
 #### References
 1. Learning Malware Analysis by Monnappa K A. Publisher: Packt Publishing. Release Date: June 2018. ISBN: 9781788392501
