@@ -105,7 +105,7 @@ daily.ldb:Osx.Trojan.Generic-6776032-0;Engine:51-255,Target:9;0&1&2&3&4;4e537433
 ```
 _Now I can see why the sample was detected by ClamAV._
 
-###### Next, I broke up the hex where there is a semicolon and converted the Hex to ASCII. Here's the results:
+###### Next, I broke up the hex where there is a semicolon and converted the Hex to ASCII.
 ```
 $ echo '4e5374335f5f3131305f5f66756e6374696f6e365f5f66756e63495a36352d5b4170705f64656c656761746520776562566965773a6469644661696c50726f766973696f6e616c4c6f6164576974684572726f723a666f724672616d653a5d4533245f324e535f39616c6c6f6361746f724953325f4545467676454545' |xxd -r -p
 NSt3__110__function6__funcIZ65-[App_delegate webView:didFailProvisionalLoadWithError:forFrame:]E3$_2NS_9allocatorIS2_EEFvvEEE
@@ -122,6 +122,23 @@ NSt3__120__shared_ptr_emplaceIN4asio2ip14basic_resolverINS2_3tcpENS2_16resolver_
 $echo '4e346173696f3664657461696c3132706f7369785f7468726561643466756e63494e53305f32317265736f6c7665725f736572766963655f626173653232776f726b5f696f5f736572766963655f72756e6e6572454545' | xxd -r -p
 N4asio6detail12posix_thread4funcINS0_21resolver_service_base22work_io_service_runnerEEE
 ```
+##### So, the signature is checking for the presence of these strings:
+```
+1. NSt3__110__function6__funcIZ65-[App_delegate webView:didFailProvisionalLoadWithError:forFrame:]E3$_2NS_9allocatorIS2_EEFvvEEE
+2. @__ZNSt3__117__assoc_sub_state10__sub_waitERNS_11unique_lockINS_5mutexEEE
+3. NSt3__120__shared_ptr_emplaceIN4asio19basic_stream_socketINS1_2ip3tcpENS1_21stream_socket_serviceIS4_EEEENS_9allocatorIS7_EEEE
+4. NSt3__120__shared_ptr_emplaceIN4asio2ip14basic_resolverINS2_3tcpENS2_16resolver_serviceIS4_EEEENS_9allocatorIS7_EEEE
+5. N4asio6detail12posix_thread4funcINS0_21resolver_service_base22work_io_service_runnerEEE
+```
+_What do they mean?:_
+1. Called if an error occurs when starting to load data for a page.
+2. 
+
+
+
+
+
+
 _At this point I have confirmed that all of the strings the signature was looking for are present in the binary and I've converted them to a human readable format._
 
 ##### Strings
@@ -378,7 +395,6 @@ So, what did I learn about this sample?
 2. The ClamAV Signature is looking for specific functions 
 
 #### References
-[1] Learning Malware Analysis by Monnappa K A. Publisher: Packt Publishing. Release Date: June 2018. ISBN: 9781788392501
-
-[2] Malware Analyst's Cookbook and DVD: Tools and Techniques for Fighting Malicious Code by Matthew Richard, Blake Hartstein, Steven Adair, Michael Hale Ligh. Publisher: John Wiley & Sons. Release Date: November 2010. ISBN: 9780470613030.
-[3] https://www.virustotal.com/#/file/a23c9488d26bf65b1b5209c042b8340304d295cdfc55f2f31cb89d3511f9634d/details
+1. Learning Malware Analysis by Monnappa K A. Publisher: Packt Publishing. Release Date: June 2018. ISBN: 9781788392501
+2. Malware Analyst's Cookbook and DVD: Tools and Techniques for Fighting Malicious Code by Matthew Richard, Blake Hartstein, Steven Adair, Michael Hale Ligh. Publisher: John Wiley & Sons. Release Date: November 2010. ISBN: 9780470613030.
+3. <https://www.virustotal.com/#/file/a23c9488d26bf65b1b5209c042b8340304d295cdfc55f2f31cb89d3511f9634d/details>
