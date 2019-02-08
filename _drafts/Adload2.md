@@ -130,7 +130,7 @@ N4asio6detail12posix_thread4funcINS0_21resolver_service_base22work_io_service_ru
 4. NSt3__120__shared_ptr_emplaceIN4asio2ip14basic_resolverINS2_3tcpENS2_16resolver_serviceIS4_EEEENS_9allocatorIS7_EEEE
 5. N4asio6detail12posix_thread4funcINS0_21resolver_service_base22work_io_service_runnerEEE
 ```
-_Googling some of the functions brings you to Total Hash and a related Adload sample from May, 2018.<https://totalhash.cymru.com/analysis/?ac7ccfd1dd2701c38fda39d89ae53e1d71c8b7b8>
+_Googling some of the functions brings you to Total Hash and a related Adload sample from May, 2018.<https://totalhash.cymru.com/analysis/?ac7ccfd1dd2701c38fda39d89ae53e1d71c8b7b8> _
 
 ##### Strings
 
