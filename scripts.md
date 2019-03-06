@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Presentations
+title: Scripts
 ---
 
 [Basic Static Analysis Report - BSAR](/scripts/bsar.sh)
