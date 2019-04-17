@@ -18,10 +18,13 @@ if ( !(Get-Module VMware.VimAutomation.Core -ErrorAction SilentlyContinue) ) {
 }
 
 #Connect to vCenter
-Connect-VIServer vsphere.local.lan -WarningAction 0
+Connect-VIServer "severname" -WarningAction 0
+
+#Count the number of VMs in the "somefolder"
+$ct_b4 = Get-Folder "somefolder" | Get-VM | Measure-Object | %{$_.Count}
 
 #Shutdown VM's that are powered on in the Practice folder.
-Get-Folder $(somefolder) | Get-VM | Where-Object {$_.powerstate -eq 'PoweredOn'} | Shutdown-VMGuest -Confirm:$false
+Get-Folder "somefolder" | Get-VM | Where-Object {$_.powerstate -eq 'PoweredOn'} | Shutdown-VMGuest -Confirm:$false
 
 #Write
 echo "Waiting for Virtual Machines to Shutdown..."
@@ -31,12 +34,13 @@ Start-Sleep -s 30
 
 Start-transcript -Path "%USERPROFILE%\Desktop\delete_vms.txt" -force -noClobber -append
 
-#Delete VM's that are in the $(somefolder) folder.
-Get-Folder $(somefolder) | Get-VM | Remove-VM -DeletePermanently -Confirm:$true
+#Delete VM's that are in the "somefolder" folder.
+Get-Folder "somefolder" | Get-VM | Remove-VM -DeletePermanently -Confirm:$true
 
-#Determine if any VMs were left beind
-$var= Get-Folder $(somefolder) | Get-VM #Array of VM names in folder
-$ct = $var.length #Count of VMs based on length of VM name array
+#Determine if VMs were left behind.
+$ct_af = Get-Folder "somefolder" | Get-VM | Measure-Object | %{$_.Count}
+echo "Removed $ct_b4 VMs"
+echo "$ct_af VMs still in the "somefolder"."
 
 #Write
 echo "Deleted $ct VMs"
