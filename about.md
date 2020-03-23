@@ -3,15 +3,11 @@ layout: page
 title: About
 ---
 
-There's a great deal of amazing resources out there related to malware and malware analysis, but I feel it is still difficult to become a "malware analyst," let alone a "reverse engineer".
-
-I personally consider the books Malware: Fighting Malicious Code, Malware Analyst's Cookbook, and Practical Malware Analysis bibles on the subject. But, these books alone have over two-thousand pages! So, how can someone read these books and other resources, retain the information, and practically apply it? Why, take lots of notes of course!
-
-This blog is my attempt to organize, store, and build upon my knowledge of malware and malware analysis in hopes of becoming a reverse engineer. I'm hoping it ends up as a sort of Spark Notes for malware analysis, or at least just a good reference for fledgling analysts (pun intended).
+Blog about things I've analyzed, projects I've worked on, or general info related to Digital Forensics & Incident Response.
 
 ## Whoami?
 
-I'm a Cyber Security Analyst working at Rubica, Inc. I have a background in Digital Forensics and Information Systems Security from my time in the US Navy. I have a BS in ISS from American Military University and am working on a graduate certificate in Incident Response from SANS Technology Institute. I currently hold the following certifications and am a member of the GIAC Advisory Board:
+I work as a CERT Analyst in the public sector. I have a background in Digital Forensics and Information Systems Security from my time in the US Navy. I have a BS in ISS from American Military University and am working on a graduate certificate in Incident Response from SANS Technology Institute. I currently hold the following certifications and am a member of the GIAC Advisory Board:
 
  <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="be557b35-16c8-4411-9016-a20b30b84285"></div>
   <script type="text/javascript">
