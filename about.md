@@ -71,6 +71,30 @@ I'm a Cyber Security Analyst working at Rubica, Inc. I have a background in Digi
       o.parentNode.insertBefore(s, o);
       })();
   </script>
+    </script>
+  <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="2aac51bb-07b1-47e1-b0f5-177236bb38ee"></div>
+  <script type="text/javascript">
+    (function() {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = '//cdn.youracclaim.com/assets/utilities/embed.js';
+      var o = document.getElementsByTagName('script')[0];
+      o.parentNode.insertBefore(s, o);
+      })();
+  </script>
+    </script>
+  <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="1f3ec985-6c50-4f17-8eec-dcb2fcdd8190"></div>
+  <script type="text/javascript">
+    (function() {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = '//cdn.youracclaim.com/assets/utilities/embed.js';
+      var o = document.getElementsByTagName('script')[0];
+      o.parentNode.insertBefore(s, o);
+      })();
+  </script>
 
 ## What's with the rooster?
 
