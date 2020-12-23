@@ -28,7 +28,7 @@ cp ClamAVHashes.txt /media/$USER/$USB/ClamAVHashes.txt
 - "CTRL+A", Right Click, convert to UPPERCASE
 - Make sure there's an empty line at the end of the file
 - Save AS ".hsh"
-#### Here's an example of my ClamAVHashes.hsh:
+- Here's an example of my ClamAVHashes.hsh:
 ```
 MD5
 B10A8DB164E0754105B7A99BE72E3FE5
