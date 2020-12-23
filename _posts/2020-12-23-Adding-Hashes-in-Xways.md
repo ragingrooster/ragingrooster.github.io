@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Xways Trick: Adding ClamAV Hashes
+title: Adding ClamAV Hashset to Xways
 ---
 ## Intro:
 The Xways manual states that you can import "a very simple and universal hash set text file, where the first line is simply the hash type (e.g. "MD5") and all the following lines are  simply  the  hash  values  as  ASCII  hex  or  (for  SHA-1)  in  Base32  notation,  one  per  line.  Line  break is 0x0D 0x0A. [1]
