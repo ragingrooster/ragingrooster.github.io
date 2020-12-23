@@ -43,4 +43,4 @@ C76F0F3840E9EF0CC2C896B16EE81FC0
 - Wait for the file to import than hit close, that's it!
 
 ## Refs:
-1. [Xways User Guide 5.18Hash Database ](http://www.x-ways.net/winhex/manual.pdf#%5B%7B%22num%22%3A521%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22XYZ%22%7D%2C0%2C792%2Cnull%5D)
+1. [Xways User Guide 5.18 Hash Database ](http://www.x-ways.net/winhex/manual.pdf#%5B%7B%22num%22%3A521%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22XYZ%22%7D%2C0%2C792%2Cnull%5D)
