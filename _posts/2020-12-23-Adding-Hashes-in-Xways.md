@@ -29,6 +29,7 @@ cp ClamAVHashes.txt /media/$USER/$USB/ClamAVHashes.txt
 - Make sure there's an empty line at the end of the file
 - Save AS ".hsh"
 #### Here's an example of my ClamAVHashes.hsh:
+```
 MD5
 B10A8DB164E0754105B7A99BE72E3FE5
 C76F0F3840E9EF0CC2C896B16EE81FC0
