@@ -3,12 +3,14 @@
 A DFIR Blog.
 
 ### Forensics:
-2020:
-- [Importing ClamAV Hashset into X-ways Forensics](./Importing-ClamAV-Xways.md)
+- 2020:
+  - [Importing ClamAV Hashset into X-ways Forensics](./Importing-ClamAV-Xways.md)
+- 2019:
+   - [Wireshark Filter Cheatsheet for SANS GNFA Certification](./Wireshark-Filters.md)
 
 ### Malware:
-2017-2019:
-- [Mac Malware Analysis: How To](./Mac-Malware-Analysis.md)
-- [Mac Malware: Adload Analysis Part 1](./Adload-Part1.md)
-- [Mac Malware: Adload Analysis Part 2](./Adload-Part2.md)
-- [University of Washington Gray Hat Cybersecurity Club Workshop](./UW-Grayhats.md)
+- 2019:
+   - [Mac Malware Analysis: How To](./Mac-Malware-Analysis.md)
+   - [Mac Malware: Adload Analysis Part 1](./Adload-Part1.md)
+   - [Mac Malware: Adload Analysis Part 2](./Adload-Part2.md)
+   - [University of Washington Gray Hat Cybersecurity Club Workshop](./UW-Grayhats.md)
