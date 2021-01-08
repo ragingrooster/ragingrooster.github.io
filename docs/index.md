@@ -13,4 +13,4 @@ A DFIR Blog.
 - [Mac Malware Analysis: How To](./Mac-Malware-Analysis.md)
 - [Mac Malware: Adload Analysis Part 1](./Adload-Part1.md)
 - [Mac Malware: Adload Analysis Part 2](./Adload-Part2.md)
-- [University of Washington Gray Hat Cybersecurity Club Workshop](./UW-Grayhats)
+- [University of Washington Gray Hat Cybersecurity Club Workshop](./UW-Grayhats.md)
