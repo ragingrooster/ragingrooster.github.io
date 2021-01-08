@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 Adding ClamAV Signatures to X-ways
 ==================================
 
