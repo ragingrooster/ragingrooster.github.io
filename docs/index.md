@@ -2,8 +2,6 @@
 
 A DFIR Blog.
 
-## Posts:
-
 ### Forensics:
 2020:
 - [Importing ClamAV Hashset into X-ways Forensics](./Importing-ClamAV-Xways.md)
