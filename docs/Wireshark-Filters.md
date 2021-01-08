@@ -32,7 +32,7 @@ This was my Wireshark Filter Cheatsheet for GNFA when I certified in May of 2019
 | smb.file | SMB - Maps the filename to fileID |
 | (smb2.filename) && !(smb2.filename == "browser")) && !(smb2.filename contains "(31B2F340-016D-11D2-945F-00C04FB984F9)\\gpt.ini") | SMB - Filename |
 | atsvc.opnum == 0, atsvc.atsvc_JobInfo.command | SMB - Remote Job Scheduler (At job) [common Lateral Movement method] |
-| !(tcp.analysis.keep_alive || tcp.analysis.keep_alive_ack) | TCP keep alive - used on very long lived connections. To keep client open client will send a packed with one byte of data to the server and not increment the TCP sequence number. |
+| !(tcp.analysis.keep_alive "Replace with Double PIPE" tcp.analysis.keep_alive_ack) | TCP keep alive - used on very long lived connections. To keep client open client will send a packed with one byte of data to the server and not increment the TCP sequence number. |
 | !(wlan.fc.type_subtype == 0x0008) | SSID |
 
 [back](./)
