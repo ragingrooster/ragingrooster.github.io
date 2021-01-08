@@ -7,4 +7,4 @@ Posts so Far:
 
 .. toctree::
 
-    2020-12-23-Adding-ClamAV-Hashset-Xways
+    2020-12-23-Adding-ClamAV-Hashset-Xways.rst
