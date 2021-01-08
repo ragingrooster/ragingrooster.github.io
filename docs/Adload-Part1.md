@@ -404,7 +404,7 @@ Time: 15.506 sec (0 m 15 s)
 _I also uploaded this binary to VT. It was detected as Adload by 17/56 AV engines right away. Results: <https://www.virustotal.com/#/file/a23c9488d26bf65b1b5209c042b8340304d295cdfc55f2f31cb89d3511f9634d/detection>._
 
 ### Finishing up.
-_Okay, I've identified that I was definetly redirected to yet another fake flash dropper. But, what does this version of Adload do? Well, you'll have to wait until part 2 for the answer when I show you some behavioral analysis. Don't worry I won't keep you waiting long this time ;). I hope you learned something from this little exercise. Please let me know if you have anything to add, or if I missed anything via email. Until next time, cheers!_
+_Okay, I've identified that I was definetly redirected to yet another fake flash dropper. See more analysis in part 2_
 
 #### IOCs:
 ```
