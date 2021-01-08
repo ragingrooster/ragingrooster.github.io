@@ -1,5 +1,5 @@
 theme: jekyll-theme-dinky
-title: [Raging Rooster REM]
-description: [A DFIR Blog]
-show_downloads: ["false"
-google_analytics: [UA-123519371-1]
+title: Raging Rooster REM
+description: A DFIR Blog
+show_downloads: false
+google_analytics: UA-123519371-1
