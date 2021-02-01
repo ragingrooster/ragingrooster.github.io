@@ -4,6 +4,7 @@ A DFIR Blog.
 
 ### Forensics:
 - 2020:
+  - [Windows Event Logs](./Windows-Event-Logs.md)
   - [Importing ClamAV Hashset into X-ways Forensics](./Importing-ClamAV-Xways.md)
 - 2019:
    - [Wireshark Filter Cheatsheet for SANS GNFA Certification](./Wireshark-Filters.md)
