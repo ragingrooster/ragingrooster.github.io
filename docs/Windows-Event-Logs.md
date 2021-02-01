@@ -8,13 +8,13 @@ Log Locations:
 | Log         | Description             |
 | :---        | :---                    | 
 | Application | Software installation, antivirus alerts, exploit attempts |
-| Security    | user authentication & logons (failures/successes), user behavior and actions, file, folder, & share access, policy changes / modifications to security settings, AD/object access, process tracking (proccess start, exit, handles, object access, etc.), system events affecting security |
+| Security    | user authentication & logons (failures/successes), user behavior and actions, file, folder, & share access, policy changes / modifications to security |
 | System      | Windows services, system compontents, drivers, etc. Services stopped/started, System reboots |
 
 #### Logon Type codes:
 | Code    | Description             | Notes                                                                                       |
 | :---    | :---                    | :---                                                                                        |
-| Type 2  | Interactive             | Logon via console (keyboard, server HKVM, virtual client)                                   |  
+| Type 2  | Interactive             | Logon via console (keyboard, server HKVM, virtual client)                                   |
 | Type 3  | Network                 | SMB, shared folders, printers, etc.                                                         |
 | Type 4  | Batch                   | Scheduled Task, tied to specified user account                                              |
 | Type 5  | Service                 | Service started, tied to specified user account                                             |
