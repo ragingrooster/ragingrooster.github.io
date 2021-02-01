@@ -85,7 +85,7 @@ Network Connection >> Authentication >> Logon >> Session Disconnect/Reconnect >>
 	- 7034 Service crashed unexpectedly
 	- 7035 Service sent a Start/Stop control
 	- 7036 Service started or stopped
-	- 7040 start type changed (Boot | On Request | Disabled)
+	- 7040 start type changed (Boot/On Request/Disabled)
 	- 7045 service was installed on the system (Win2008R2+)
 - %SystemRoot%\System32\Winevt\Logs\Security.evtx
 	- 4697 service was installed on the system
