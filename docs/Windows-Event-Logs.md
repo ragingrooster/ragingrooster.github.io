@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 ## Windows Logs:
 Log Locations:
 - %WinDir%\System32\winevt\Logs
@@ -107,3 +111,5 @@ Network Connection >> Authentication >> Logon >> Session Disconnect/Reconnect >>
 - https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID=4688
 - https://www.cyprich.com/2017/03/29/common-task-scheduler-event-ids/
 - DFPS_FOR500_v4.9_4-19
+
+[back](./)
