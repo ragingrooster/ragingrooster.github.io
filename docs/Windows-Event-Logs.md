@@ -4,14 +4,16 @@ Log Locations:
 - [root]\Windows\System32\LogFiles
 - [root]\inetpub\logs\LogFiles
 
-### Evidence of: 
+### Evidence of:
+
 | Log         | Description             |
 | :---        | :---                    |
 | Application | Software installation, antivirus alerts, exploit attempts |
 | Security    | user authentication & logons (failures/successes), user behavior and actions, file, folder, & share access, policy changes / modifications to security settings, AD/object access, process tracking (proccess start, exit, handles, object access, etc.), system events affecting security |
 | System      | Windows services, system compontents, drivers, etc. Services stopped/started, System reboots |
 
-#### Logon Type codes:
+### Logon Type codes:
+
 | Code    | Description             | Notes                                                                                       |
 | :---    | :---                    | :---                                                                                        |
 | Type 2  | Interactive             | Logon via console (keyboard, server HKVM, virtual client)                                   |
@@ -35,7 +37,7 @@ Log Locations:
 	- 4672 Account logon w/ superuser rights (admin)
 - events contain logon type, account, timestamp, event id, computer
 
-#### RDP Related Events:
+### RDP Related Events:
 Network Connection >> Authentication >> Logon >> Session Disconnect/Reconnect >> Logoff
 - Network Connection:
 	- %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-TerminalServices-LocalSessionManager%4Operational.evtx
