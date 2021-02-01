@@ -24,7 +24,7 @@ Log Locations:
 | Type 10 | RemoteInteractive       | Terminal Services, RDP, Remote Assistance (prior to Win10 were type 2)                      |
 | Type 11 | CachedInteractive       | Cached creds used when not in contact with DC (facilitates mobile users), bad on servers    |
 | Type 12 | CachedRemoteInteractive | Cached creds used for remote interactive logon (RDP), MS live accts on stdalone wrkstations |
-| Type 13 | Cached Unlock           | Cached creds used for unlock operations, like Type 7            
+| Type 13 | Cached Unlock           | Cached creds used for unlock operations, like Type 7                                        |
 
 ### Account Usage:
 - %SystemRoot%\System32\Winevt\Logs\Security.evtx
