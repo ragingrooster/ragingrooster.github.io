@@ -73,7 +73,7 @@ Network Connection >> Authentication >> Logon >> Session Disconnect/Reconnect >>
 		- 23   Remote Desktop Services: Session logoff succeeded (user initiated a formal system logoff vs simple disconnect)
 		- 4634 An account was logged off (Type 10 (RemoteInteractive/TerminalServices/Remote Desktop) or Type 7 from remote IP (if reconnection from prev. RDP session) pair with 21)
 		- 4647 User initiated logoff (user initiated loggoff.. requires reasoning and temporal context)
-		- 9009 The Desktop Window Manager has exited with code (<X>) (user formally closes an RDP connection and indicates the RDP desktop GUI has been shut down)
+		- 9009 The Desktop Window Manager has exited with code (<X>) (user formally closes an RDP connection and indicates the RDP desktop GUI has been shutdown)
 
 ### Windows Processes:
 - %SystemRoot%\System32\Winevt\Logs\Security.evtx
