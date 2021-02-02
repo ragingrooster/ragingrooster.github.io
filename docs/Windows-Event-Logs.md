@@ -1,7 +1,3 @@
----
-layout: default
----
-
 ## Windows Logs:
 Log Locations:
 - %WinDir%\System32\winevt\Logs
