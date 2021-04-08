@@ -3,6 +3,8 @@
 A DFIR Blog.
 
 ### Forensics:
+- 2021:
+  - [Quick Notes on Memory Forensics](./Memory-Analysis-Quick-Notes.md)
 - 2020:
   - [Windows Event Logs](./Windows-Event-Logs.md)
   - [Importing ClamAV Hashset into X-ways Forensics](./Importing-ClamAV-Xways.md)
