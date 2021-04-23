@@ -24,10 +24,19 @@ OPTIONAL:
 ```
 cp ClamAVHashes.txt /media/$USER/$USB/ClamAVHashes.txt
 ```
+But, you could also use PowerShell:
+```
+sigtool.exe --unpack .\daily.cld
+sigtool.exe --unpack .\main.cld
+Select-String -Path .\daily.hdb -Pattern '^[a-f0-9]{32}' | ForEach-Object { $_.Matches } | % { $_.Values } | Out-File 'ClamAVHashes.txt'
+Select-String -Path .\main.hdb -Pattern '^[a-f0-9]{32}' | ForEach-Object { $_.Matches } | % { $_.Values } | Out-File -Append 'ClamAVHashes.txt'
+```
+
 ## Formatting:
 - Edit ClamAVHashes.txt in Notepad++
 - Add "MD5" (no quotes) to Line 1
 - "CTRL+A", Right Click, convert to UPPERCASE
+- Set encoding to "UTF-8 BOM"
 - Make sure there's an empty line at the end of the file
 - Save AS ".hsh"
 
