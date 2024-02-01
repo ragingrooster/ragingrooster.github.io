@@ -74,6 +74,9 @@ Network Connection >> Authentication >> Logon >> Session Disconnect/Reconnect >>
 		- 4634 An account was logged off (Type 10 (RemoteInteractive/TerminalServices/Remote Desktop) or Type 7 from remote IP (if reconnection from prev. RDP session) pair with 21)
 		- 4647 User initiated logoff (user initiated loggoff.. requires reasoning and temporal context)
 		- 9009 The Desktop Window Manager has exited with code (<X>) (user formally closes an RDP connection and indicates the RDP desktop GUI has been shutdown)
+- Outgoing RDP
+  	- %SystemRoot%\System32\Winevt\Logs\Security.evtx
+  	  	- 4688 A logon was attempted using explict credentials (Target: Account making connection, TargetServer: System being logged onto)
 
 ### Windows Processes:
 - %SystemRoot%\System32\Winevt\Logs\Security.evtx
@@ -96,7 +99,7 @@ Network Connection >> Authentication >> Logon >> Session Disconnect/Reconnect >>
 	- 4700 A scheduled task was enabled
 - %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-TaskScheduler%4Operational.evtx
 	- See chart @ https://www.cyprich.com/2017/03/29/common-task-scheduler-event-ids/
-	
+ 
 ### Refs:
 - https://ponderthebits.com/2018/02/windows-rdp-related-event-logs-identification-tracking-and-investigation/
 - https://dfironthemountain.wordpress.com/2019/02/15/rdp-event-log-dfir/
